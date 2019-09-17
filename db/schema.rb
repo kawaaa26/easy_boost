@@ -3,7 +3,7 @@ ActiveRecord::Schema.define(version: 2019_09_17_112722) do
   enable_extension "plpgsql"
 
   create_table "lessons", force: :cascade do |t|
-    t.time "time", default: -> { "now()" }, null: false
+    t.datetime "time", default: -> { "now()" }, null: false
     t.string "name", default: "", null: false
     t.string "studio", default: "", null: false
     t.string "performer", default: "", null: false
