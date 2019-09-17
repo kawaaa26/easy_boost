@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2019-09-17 20:27:22
+  name: MyString
+  studio: MyString
+  performer: MyString
+  bag_number: 1
+  cancellation: false
+
+two:
+  time: 2019-09-17 20:27:22
+  name: MyString
+  studio: MyString
+  performer: MyString
+  bag_number: 1
+  cancellation: false
