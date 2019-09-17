@@ -1,7 +1,7 @@
 class CreateLessons < ActiveRecord::Migration[6.0]
   def change
     create_table :lessons do |t|
-      t.time :time, default: -> { "now()" }, null: false
+      t.datetime :time, default: -> { "now()" }, null: false
       t.string :name, default: "", null: false
       t.string :studio, default: "", null: false
       t.string :performer, default: "", null: false
