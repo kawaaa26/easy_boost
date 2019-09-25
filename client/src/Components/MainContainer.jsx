@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import LessonsContainer from './LessonsContainer';
+import FormContainer from './FormContainer';
 
 export default class MainContainer extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ export default class MainContainer extends React.Component {
   render() {
     return (
       <div className="app-main">
+        <FormContainer />
         <LessonsContainer lessonData={ this.state.lessons } />
       </div>
     );
