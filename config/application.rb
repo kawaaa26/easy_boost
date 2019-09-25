@@ -31,7 +31,7 @@ module EasyBoost
         origins 'http://localhost:3000'
         resource '*',
         :headers => :any,
-        :hethods => %i(get post patch delete options)
+        :methods => %i(get post patch delete options)
       end
     end
   end
