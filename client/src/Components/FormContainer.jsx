@@ -14,6 +14,11 @@ export default class FormContainer extends React.Component {
     this.setState({ lesson: e.target.value })
   }
 
+  handleSubmit = () => {
+    this.props.createLesson(this.state.lesson)
+    this.setState({lesson:''})
+  }
+
   render() {
     return (
       <div>
