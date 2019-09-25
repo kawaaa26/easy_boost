@@ -1,7 +1,7 @@
 import React from 'react';
 import ViewLesson from './ViewLesson'
 
-export default class LessonsContainerV extends React.Component {
+export default class LessonsContainer extends React.Component {
   render() {
     return (
       <div className="lessonsList">
