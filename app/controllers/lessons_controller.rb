@@ -6,7 +6,7 @@ class LessonsController < ApplicationController
   end
 
   def create
-    @lesson = Lesson.create(lesson: params[:lesson])
+    @lesson = Lesson.create(lesson_params)
     render json: @lesson
   end
 
@@ -25,4 +25,9 @@ class LessonsController < ApplicationController
     end
   end
 
+  private
+
+  def lesson_params
+    params.fetch(:lesson, {}).permit(:name, :performer, :studio, :bag_number)
+  end
 end

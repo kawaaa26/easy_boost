@@ -17,22 +17,26 @@ export default class FormContainer extends React.Component {
   // onChangetext(e) {
   //   this.setState({ lesson: e.target.value })
   // }
-
-  onChangeName(name) {
-    this.setState({ name: name.target.value })
+  onChange(key, value) {
+    console.log('a')
+    this.setState({ [key]: value })
   }
 
-  onChangeStudio(studio) {
-    this.setState({ studio: studio.target.value })
-  }
+  // onChangeName(name) {
+  //   this.setState({ name: name.target.value })
+  // }
 
-  onChangePerformer(performer) {
-    this.setState({ performer: performer.target.value })
-  }
+  // onChangeStudio(studio) {
+  //   this.setState({ studio: studio.target.value })
+  // }
 
-  onChangeNumber(number) {
-    this.setState({ bag_number: number.target.value })
-  }
+  // onChangePerformer(performer) {
+  //   this.setState({ performer: performer.target.value })
+  // }
+
+  // onChangeNumber(number) {
+  //   this.setState({ bag_number: number.target.value })
+  // }
 
 
   // handleSubmit = () => {
@@ -41,7 +45,7 @@ export default class FormContainer extends React.Component {
   // }
 
   handleSubmit = () => {
-    this.props.createLesson(this.state.name)
+    this.props.createLesson(this.state)
     this.setState({name:'', studio: '', performer: '', bag_number: ''})
     // this.setState({studio:''})
     // this.setState({performer:''})
@@ -67,24 +71,24 @@ export default class FormContainer extends React.Component {
               type="text"
               value={ this.state.name }
               placeholder="LESSON NAME"
-              onChange={ name => this.onChangeName(name) }
+              onChange={ event => this.onChange("name", event.target.value) }
             />
             <FormControl
               type="text"
               value={ this.state.studio }
               placeholder="STUDIO NAME"
-              onChange={ studio => this.onChangeStudio(studio) }
+              onChange={ event => this.onChange("studio", event.target.value) }
             />
             <FormControl
               type="text"
               value={ this.state.performer }
               placeholder="PERFORMER NAME"
-              onChange={ performer => this.onChangePerformer(performer) }
+              onChange={ event => this.onChange("performer", event.target.value) }
             />
             <FormControl
               type="integer"
               value={ this.state.bag_number }
-              onChange={ bag_number => this.onChangeNumber(bag_number) }
+              onChange={ event => this.onChange("bag_number", event.target.value) }
             />
           </FormGroup>
         </form>

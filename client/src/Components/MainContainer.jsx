@@ -24,6 +24,7 @@ export default class MainContainer extends React.Component {
   }
 
   createLesson = (lesson) => {
+    console.log(lesson)
     axios.post('http://localhost:3001/lessons', { lesson: lesson } )
       .then((response) => {
         const newData = update(this.state.lessons, { $push:[response.data]})
