@@ -1,6 +1,22 @@
 import React from 'react';
+import { Button } from 'react-bootstrap'
 
 export default class ViewLesson extends React.Component {
+
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     lesson: '',
+  //     name: '',
+  //     studio: '',
+  //     prformer: '',
+  //     bag_number: ''
+  //   }
+  // }
+
+  handleDelete = () => {
+    this.props.onDelete(this.props.data.id)
+  }
 
   render() {
     return (
@@ -29,6 +45,9 @@ export default class ViewLesson extends React.Component {
               </td>
               <td>
                 { this.props.data.cancellation }
+              </td>
+              <td>
+                <Button className="deleteButton" onClick={ this.handleDelete }>X</Button>
               </td>
             </tr>
         </tbody>
